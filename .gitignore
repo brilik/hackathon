@@ -27,3 +27,4 @@ node_modules/
 !Readmy.md
 !docker-compose.yml
 !Docker/
+!.env.example
