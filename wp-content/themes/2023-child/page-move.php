@@ -1,6 +1,6 @@
 <?php
 echo json_encode([
-    'column' => rand(0, 8)
+    'column' => 2
 ]);
 exit;
 
