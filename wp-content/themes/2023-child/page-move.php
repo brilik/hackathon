@@ -8,6 +8,23 @@ $grid = [
     ['F', 'S', 'F', 'x', 'F', '_', 'S', 'F', 'F',],
 ];
 
+
+echo '<pre style="border: 1px solid red; padding: 35px; width: 75%; margin: 20px auto; display: block;">';
+print_r($_POST);
+echo '</pre>';
+
+function getValidLocation($grid)
+{
+    for ($i = 0; $i <= 6; $i++) {
+        for ($j = 0; $j <= 9; $j++) {
+            if ($grid[$i][$j] === '_') {
+            }
+        }
+    }
+}
+
+getValidLocation($grid);
+
 $moves = 0;
 $grid = makeMove($grid);
 // Считать таблицу
@@ -42,7 +59,3 @@ function me()
 {
     return $_POST['player'] === 'F' ? 'S' : 'F';
 }
-
-return [
-    "column" => "2-0"
-];
