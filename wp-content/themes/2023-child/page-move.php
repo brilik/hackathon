@@ -7,14 +7,6 @@ $grid = [
     ['S', '_', 'S', 'x', 'S', '_', '_', '_', 'F',],
     ['F', 'S', 'F', 'x', 'F', '_', 'S', 'F', 'F',],
 ];
-?>
-    <form action="/move" method="post">
-        <input type="hidden" name="gameId" value="12345">
-        <input type="hidden" name="board" value="<?php json_encode(print_r($grid)); ?>">
-        <input type="hidden" name="player" value="F">
-        <input type="submit" value="test">
-    </form>
-<?php
 
 $moves = 0;
 $grid = makeMove($grid);
@@ -45,12 +37,12 @@ function makeMove ($grid) {
     return $grid;
 }
 
-echo '<pre style="border: 1px solid red; padding: 35px; width: 75%; margin: 20px auto; display: block;">';
-print_r($_POST);
-echo '</pre>';
-
 // Проверка на чей первый ход, чтобы узнать пустая ли доска
 function me()
 {
     return $_POST['player'] === 'F' ? 'S' : 'F';
 }
+
+return [
+    "column" => "2-0"
+];
